@@ -1,0 +1,157 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 0 1.25rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  background: #f3ebd8;
+  color: #1a1200;
+}
+
+a {
+  color: #8b3a00;
+}
+
+a:visited {
+  color: #5c2600;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 0.15rem;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 2px solid #bfaa80;
+  padding-bottom: 0.2rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+header {
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  margin: 0;
+  color: #7a6040;
+  font-size: 0.95rem;
+}
+
+nav {
+  margin: 0.75rem 0 2.5rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: #7a6040;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1a1200;
+}
+
+nav a + a::before {
+  content: " | ";
+  color: #bfaa80;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #8b3a00;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: none;
+  color: #1a1200;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* Profile photo on About page */
+.photo {
+  float: right;
+  margin: 0 0 1rem 2rem;
+  border: 1px solid #bfaa80;
+  padding: 4px;
+  background: #e0d4b4;
+  width: 158px; /* 148px image + 4px padding each side, border-box */
+}
+
+.photo img {
+  display: block;
+  width: 148px;
+  height: 185px;
+  object-fit: cover;
+  background: #c8bc9c;
+}
+
+@media (max-width: 480px) {
+  .photo {
+    float: none;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+/* Publications */
+.publication {
+  margin-bottom: 1.2rem;
+}
+
+.publication .title {
+  font-style: italic;
+}
+
+.publication .meta {
+  font-size: 0.9rem;
+  color: #7a6040;
+}
+
+.publication .meta_primer {
+  font-size: 0.9rem;
+  line-height: 1.;
+}
+
+/* Teaching */
+.course {
+  margin-bottom: 1.2rem;
+}
+
+/* Conferences */
+.talk {
+  margin-bottom: 1rem;
+}
+
+.talk .venue {
+  font-size: 0.9rem;
+  color: #7a6040;
+}
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 0.75rem;
+  border-top: 2px solid #bfaa80;
+  font-family: system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: #9a8060;
+}

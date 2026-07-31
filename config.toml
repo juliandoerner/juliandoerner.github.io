@@ -1,0 +1,23 @@
+site_name     = "Julian Dörner"
+site_subtitle = "Doctoral Candidate — Karlsruhe Institute of Technology"
+
+# Navigation order. href must match a filename in src/pages/.
+[[nav]]
+href  = "index.html"
+label = "About"
+
+[[nav]]
+href  = "publications.html"
+label = "Publications"
+
+[[nav]]
+href  = "conferences.html"
+label = "Conferences"
+
+[[nav]]
+href  = "teaching.html"
+label = "Teaching"
+
+[[nav]]
+href  = "contact.html"
+label = "Contact"
