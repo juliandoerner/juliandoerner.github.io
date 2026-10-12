@@ -41,6 +41,9 @@ title: Page Title
 | Styles | `src/style.css` |
 | Profile photo | drop `photo.jpg` into `src/` |
 
+On the Publications page, the build automatically numbers each `<div class="publication">`
+in page order, continuously across sections. Adding or reordering entries updates the numbers.
+
 ## Local development
 
 **First time setup** — create a virtual environment and install the dependency:

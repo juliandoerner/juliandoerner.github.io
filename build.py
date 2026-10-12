@@ -15,7 +15,9 @@ Each page in src/pages/ starts with a front matter block:
 
 import tomllib
 import shutil
+import re
 from datetime import date
+from itertools import count
 from pathlib import Path
 
 # ── Site-wide settings (edit config.toml, not here) ──────────────────────────
@@ -59,6 +61,18 @@ def build_nav(current_file):
     return "\n  ".join(parts)
 
 
+def number_publications(content):
+    """Add continuous numbers to publication entries in page order."""
+    numbers = count(1)
+    return re.sub(
+        r'(<div class="publication">\s*)',
+        lambda match: (
+            f'{match[1]}<span class="publication-number">[{next(numbers)}]</span> '
+        ),
+        content,
+    )
+
+
 # ── Build ─────────────────────────────────────────────────────────────────────
 
 def build():
@@ -78,6 +92,8 @@ def build():
 
     for page_file in sorted(PAGES_DIR.glob("*.html")):
         meta, content = parse_front_matter(page_file.read_text(encoding="utf-8"))
+        if page_file.name == "publications.html":
+            content = number_publications(content)
 
         page_title = meta.get("title", "")
         full_title = (SITE_NAME if page_file.name == "index.html"
